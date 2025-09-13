@@ -1,0 +1,15 @@
+{
+  "name": "mcp-openverse-adapter-js",
+  "version": "1.0.0",
+  "description": "MCP server exposing search and fetch tools for retrieving openly licensed images from Openverse (JavaScript adaptation).",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "dependencies": {
+    "fastmcp": "^0.3.0",
+    "node-fetch": "^2.6.7",
+    "zod": "^3.22.2"
+  }
+}
