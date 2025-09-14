@@ -1,1 +1,51 @@
-{\n  "$schema": "https://glama.ai/mcp/schemas/server.json",\n  "maintainers": ["potek001"],\n  "name": "openverse-adapter",\n  "version": "1.0.0",\n  "description": "MCP server for retrieving openly licensed images from Openverse",\n  "runtime": "node",\n  "entry": "index.js",\n  "tools": [\n    {\n      "name": "search",\n      "description": "Search for openly-licensed images on Openverse",\n      "parameters": {\n        "type": "object",\n        "required": ["query"],\n        "properties": {\n          "query": {\n            "type": "string",\n            "description": "Search terms"\n          },\n          "page": {\n            "type": "number",\n            "description": "Page number (default: 1)"\n          },\n          "page_size": {\n            "type": "number",\n            "description": "Results per page (default: 20, max: 500)"\n          },\n          "license_type": {\n            "type": "string",\n            "description": "License type (commercial or modification)"\n          }\n        }\n      }\n    },\n    {\n      "name": "fetch",\n      "description": "Get detailed information about a specific image",\n      "parameters": {\n        "type": "object",\n        "required": ["id"],\n        "properties": {\n          "id": {\n            "type": "string",\n            "description": "Openverse image ID (UUID format)"\n          }\n        }\n      }\n    }\n  ]\n}
+{
+  "$schema": "https://glama.ai/mcp/schemas/server.json",
+  "maintainers": ["potek001"],
+  "name": "openverse-adapter",
+  "version": "1.0.0",
+  "description": "MCP server for retrieving openly licensed images from Openverse",
+  "runtime": "node",
+  "entry": "index.js",
+  "tools": [
+    {
+      "name": "search",
+      "description": "Search for openly-licensed images on Openverse",
+      "parameters": {
+        "type": "object",
+        "required": ["query"],
+        "properties": {
+          "query": {
+            "type": "string",
+            "description": "Search terms"
+          },
+          "page": {
+            "type": "number",
+            "description": "Page number (default: 1)"
+          },
+          "page_size": {
+            "type": "number",
+            "description": "Results per page (default: 20, max: 500)"
+          },
+          "license_type": {
+            "type": "string",
+            "description": "License type (commercial or modification)"
+          }
+        }
+      }
+    },
+    {
+      "name": "fetch",
+      "description": "Get detailed information about a specific image",
+      "parameters": {
+        "type": "object",
+        "required": ["id"],
+        "properties": {
+          "id": {
+            "type": "string",
+            "description": "Openverse image ID (UUID format)"
+          }
+        }
+      }
+    }
+  ]
+}
